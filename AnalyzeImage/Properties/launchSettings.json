@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AnalyzeImage": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7071"
+    }
+  }
+}
