@@ -22,13 +22,13 @@ namespace AnalyzeImage.Function
 
         private readonly ComputerVisionClient _computerVisionClient;
         private readonly BlobServiceClient _blobServiceClient;
-        private readonly CosmosClient _CosmosClient;
+        private readonly CosmosClient _cosmosClient;
 
         public Functions(ComputerVisionClient computerVisionClient, BlobServiceClient blobServiceClient, CosmosClient cosmosClient)
         {
             _computerVisionClient = computerVisionClient;
             _blobServiceClient = blobServiceClient;
-            _CosmosClient = cosmosClient;
+            _cosmosClient = cosmosClient;
         }
 
         [FunctionName("DetectPeople")]
@@ -85,7 +85,7 @@ namespace AnalyzeImage.Function
         {
             string cosmosDatabaseId = Environment.GetEnvironmentVariable("DatabaseId");
             string cosmosContainerId = Environment.GetEnvironmentVariable("ContainerId");
-            Container container = _CosmosClient.GetContainer(cosmosDatabaseId, cosmosContainerId);
+            Container container = _cosmosClient.GetContainer(cosmosDatabaseId, cosmosContainerId);
 
             ImageAnalysisTypePeople imageAnalysisTypePeople = new()
             {
