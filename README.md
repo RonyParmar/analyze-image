@@ -1,1 +1,1 @@
-# analyze-image
+# image-recognition
