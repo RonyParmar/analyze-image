@@ -11,9 +11,8 @@ using Azure.Messaging.EventGrid;
 using Azure.Messaging.EventGrid.SystemEvents;
 using System.Linq;
 using Microsoft.Azure.Cosmos;
-using RonyParm.Azure.AnalyzeImage;
 
-namespace AnalyzeImage.Function
+namespace RonyParm.Azure.AnalyzeImage
 {
     public class Functions
     {
